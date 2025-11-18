@@ -23,22 +23,16 @@ function Home() {
   }, []);
 
   const checked = async (id) => {
-    
-    
     try {
       await axios.put(
         "https://deploying-backend-gact.onrender.com/update/" + id
       );
       fetchTodos();
-
     } catch (err) {
       console.log(err);
     }
   };
-
   const deleted = async (id) => {
-    
-  
     try {
       await axios.delete(
         "https://deploying-backend-gact.onrender.com/delete/" + id
