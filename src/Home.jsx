@@ -10,7 +10,7 @@ function Home() {
   const fetchTodos = async () => {
    
     try {
-      const result = await axios.get("http://localhost:3001/get");
+      const result = await axios.get("https://deploying-backend-gact.onrender.com/get");
       setTodos(result.data);
     } catch (err) {
       console.log(err);
@@ -27,7 +27,7 @@ function Home() {
     
     try {
       await axios.put(
-        "http://localhost:3001/update/" + id
+        "https://deploying-backend-gact.onrender.com/update/" + id
       );
       fetchTodos();
 
@@ -41,7 +41,7 @@ function Home() {
   
     try {
       await axios.delete(
-        "http://localhost:3001/delete/" + id
+        "https://deploying-backend-gact.onrender.com/delete/" + id
       );
       fetchTodos();
     } catch (err) {

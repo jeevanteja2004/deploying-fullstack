@@ -6,8 +6,7 @@ function Create(props) {
   const [task,setTask]=useState("");
   const {callFunction}=props;
   const handleAdd=async()=>{
-    axios.post("http://localhost:3001/add",{task:task }  )
-      
+    axios.post("https://deploying-backend-gact.onrender.com/add",{task:task }  )  
     .then((res)=>{
     console.log(res.data);
     callFunction();
